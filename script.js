@@ -11,16 +11,13 @@ function pizza() {
 
         let totalPrice = (pizzaCount * pizzaPrice) + (drinkCount + drinkPrice);
 
-        return {
-            message: `Ваше замовлення: ${pizzaCount} піц та ${drinkCount} напоїв. \nЗагальна вартість: ${totalPrice} грн.`,
-            total: totalPrice
+        return `Ваше замовлення: ${pizzaCount} піц та ${drinkCount} напоїв. \nЗагальна вартість: ${totalPrice} грн.`
         };
-    }
 
     let pizzas = parseInt(prompt("Введіть кількість піц від 1 до 10 які б ви хотіли замовити"), 10);
     let drinks = parseInt(prompt("Введіть кількість напоїв від 1 до 10 які б ви хотіли замовити"), 10);
 
     let result = orderPizza(pizzas, drinks);
-    alert(result.message);
+    alert(result);
     console.log("Вартість замовлення", result.total);
 }
